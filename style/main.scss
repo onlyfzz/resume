@@ -1,0 +1,233 @@
+body {
+    font-family: "microsoft yahei";
+}
+.page1 {
+    color: #f5f5f5;
+    .head {
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 40px;
+    }
+    .content-wrap{
+        display: flex; 
+        width: 80%;
+        margin: 0 auto;
+        .page-left {
+            flex: 0 0 200px;
+            position: relative;
+            left: -100%;
+            text-align: center;
+            .img-wrap {
+                width: 150px;
+                height: 150px;
+                border: 5px solid #aee2d9;
+                margin: 0 auto;
+                border-radius: 50%;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                }
+            }
+            .name {
+                display: inline-block;
+                padding: 10px 0;
+                border-bottom: 1px solid #f5f5f5;
+                text-align: center;
+                font-size: 24px;
+            }
+            .info {
+                line-height: 1.5;
+                text-align: left;
+                font-size: 14px;
+                .self {
+                    margin-top: 10px;
+                }
+                .blog {
+                    margin-top: 10px;
+                    li {
+                        padding: 5px 0;
+                    }
+                    a {
+                        color: #fff;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .page-right {
+            flex: 1;
+            position: relative;
+            right: -100%;
+            padding-left: 50px;
+            font-size: 14px;
+            .title {
+                    padding-bottom: 10px;
+                    font-size: 16px;
+                    font-weight: bold;
+            }
+            .right-top {
+                padding: 10px 0;
+                .content {
+                    padding-left: 20px;
+                }
+            }
+            .right-main {
+                .title {
+                    padding-bottom: 10px;
+                }
+                .item {
+                    margin: 0 0 10px 20px;
+                    dt {
+                        font-size: 16px;                     
+                    }
+                }
+                dd {
+                    line-height: 1.5;
+                }
+            }
+        }
+    } 
+}
+.page2 {
+    text-align: center;
+    color: #f5f5f5;
+    .head {
+        padding: 30px;
+        font-size: 40px;
+    }
+    .content {
+        opacity: 0;
+        line-height: 1.8;
+        font-size: 20px;
+    }
+}
+.page3 {
+    /*画廊容器*/
+    .wrap{
+        position: absolute;
+        z-index: 1;
+        width: 96%;
+        height: 600px;
+        top: 50%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -48%;
+        overflow: hidden;
+        background: #0b907e;
+        box-shadow: 0 0 8px #ccc;
+        .head {
+            position: absolute;
+            z-index: 2;
+            top: 20px;
+            width: 100%;
+            font-size: 30px;      
+            text-align: center;
+            color: #fff;
+        }
+    }
+    /*居中图片最高层*/
+    .center{
+        z-index: 999;
+    }
+    .side-front .img-center{
+        display: block;
+        width: 100%;
+        height: 85%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .side-front .caption{
+        font-size: 16px;
+        height: 15%;
+        line-height: 1.5em;
+    }   
+    /*负责翻转*/
+    .photo-wrap{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        transition: all 1s;
+        box-shadow: 0 0 4px #eee;
+    }
+    /*正面*/
+    .side-front{
+        width: 100%;
+        height: 100%;
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        background: #fff;
+    }
+    .caption > a {
+        color: #000;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    /*按钮导航样式*/
+    .nav{
+        position: absolute;
+        bottom: 50px;
+        width: 50%;
+        height: 30px;
+        line-height: 30px;
+        left: 25%;
+        z-index: 999;
+        text-align: center;
+        background: #fff;
+    }
+    /*所有按钮样式*/
+    .nav .i{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        text-align: center;
+        background: #aaa;
+        border-radius: 50%;
+        -webkit-transform: scale(0.48);
+        -moz-transform: scale(0.48);
+        transform: scale(0.48);
+    }
+    /*当前按钮样式*/
+    .nav .i_current{
+        transform: scale(1);
+        background: url(../img/icon.png);
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        background-size: 100%;
+        transition: all 0.5s;
+    }
+    /*所有图片*/
+    .photo{
+        position: absolute;
+        width: 260px;
+        height: 320px;
+        top: 50%;
+        left: 50%;
+        margin-top: -160px;
+        margin-left: -130px;
+        box-shadow: 0 0 1px rgba(0,0,0,0.01);
+        text-align: center;
+        transition: all .6s;
+    }
+}
+.page4 {
+    text-align: center;
+    color: #fff;
+    .head {
+        padding: 30px;
+        font-size: 30px;       
+    }
+    .content {
+        opacity: 0;
+        line-height: 1.5;
+        font-size: 20px;
+    }
+}
