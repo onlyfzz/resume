@@ -1,6 +1,6 @@
 $(function(){
     $('#fullpage').fullpage({
-        sectionsColor: ['#22c3aa', '#01586b', '#fff', '#7baece'],
+        sectionsColor: ['#22c3aa', '#7baece', '#fff', '#7baece'],
         navigation: true,
         navigationColor: '#f5f5f5',
         navigationPosition: 'right',
