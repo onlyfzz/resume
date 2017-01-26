@@ -177,3 +177,11 @@ function addPhotos() {
     resort(random([0,data.length - 1]));
 }
 addPhotos();
+
+function changeBottom() {
+    if (window.innerHeight < 600) {
+        $('.page1').find('.head').css('paddingBottom', 0);
+    }
+}
+changeBottom();
+
