@@ -136,53 +136,51 @@ function changeBottom() {
 addPhotos();
 changeBottom();
 
-$(function(){
-    $('#fullpage').fullpage({
-        sectionsColor: ['#22c3aa', '#7baece', '#fff', '#7baece'],
-        navigation: true,
-        navigationColor: '#f5f5f5',
-        navigationPosition: 'right',
-        showActiveTooltip: true,
-        afterLoad: function(anchorLink, index) {
-            switch (index){
-                case 1:
-                    move('.page1 .page-left').set('left','0').end();
-                    move('.page1 .page-right').set('right','0').end();
-                    break;
-                case 2: 
-                    move('.page2 .content').set('opacity', 1).duration('1s').end();
-                    break;
-                case 3:
-                    resort(random([0,data.length - 1]));
-                    break;
-                case 4: 
-                    move('.page4 .content').set('opacity', 1).duration('1s').end();
-                    break;
-                default :
-                    break;
-            }
-            $('.section').removeClass('leave').addClass('load');
-        },
-        onLeave: function(index, nextIndex, direction) {
-            switch (index){
-                case 1:
-                    move('.page1 .page-left').set('left','-100%').end();
-                    move('.page1 .page-right').set('right','-100%').end();
-                    break;
-                case 2: 
-                    move('.page2 .content').set('opacity', 0).end();
-                    break;
-                case 3:
-                    resort(random([0,data.length - 1]));
-                    break;
-                case 4: 
-                    move('.page4 .content').set('opacity', 0).end();
-                    break;
-                default :
-                    break;
-            }
+$('#fullpage').fullpage({
+    sectionsColor: ['#22c3aa', '#7baece', '#fff', '#7baece'],
+    navigation: true,
+    navigationColor: '#f5f5f5',
+    navigationPosition: 'right',
+    showActiveTooltip: true,
+    afterLoad: function(anchorLink, index) {
+        switch (index){
+            case 1:
+                move('.page1 .page-left').set('left','0').end();
+                move('.page1 .page-right').set('right','0').end();
+                break;
+            case 2: 
+                move('.page2 .content').set('opacity', 1).duration('1s').end();
+                break;
+            case 3:
+                resort(random([0,data.length - 1]));
+                break;
+            case 4: 
+                move('.page4 .content').set('opacity', 1).duration('1s').end();
+                break;
+            default :
+                break;
         }
-    });
+        $('.section').removeClass('leave').addClass('load');
+    },
+    onLeave: function(index, nextIndex, direction) {
+        switch (index){
+            case 1:
+                move('.page1 .page-left').set('left','-100%').end();
+                move('.page1 .page-right').set('right','-100%').end();
+                break;
+            case 2: 
+                move('.page2 .content').set('opacity', 0).end();
+                break;
+            case 3:
+                resort(random([0,data.length - 1]));
+                break;
+            case 4: 
+                move('.page4 .content').set('opacity', 0).end();
+                break;
+            default :
+                break;
+        }
+    }
 });
 
 
