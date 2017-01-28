@@ -1,6 +1,14 @@
 body {
     font-family: "microsoft yahei";
 }
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #f5f5f5; /*这里设置的是活动导航的颜色*/
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: #f5f5f5;/*这里设置的是非活动导航的颜色*/
+}
 .page1 {
     color: #f5f5f5;
     .head {
