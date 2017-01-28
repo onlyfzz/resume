@@ -149,6 +149,7 @@ $('#fullpage').fullpage({
                 move('.page1 .page-right').set('right','0').end();
                 break;
             case 2: 
+                $('.page3').css('opacity', 1);
                 move('.page2 .content').set('opacity', 1).duration('1s').end();
                 break;
             case 3:
