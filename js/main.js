@@ -20,6 +20,7 @@ var data = [
         site: 'https://github.com/onlyfzz/complete-website'
     }
 ];
+var flag = true;
 //翻面控制,点击的海报居中控制
 function turn(ele) {
     var n = ele.attr('id').split("-")[1];
@@ -140,14 +141,15 @@ $('#fullpage').fullpage({
     navigationColor: '#f5f5f5',
     navigationPosition: 'right',
     showActiveTooltip: true,
-    afterRender : function() {
-        addPhotos();
-    },
     afterLoad: function(anchorLink, index) {
         switch (index){
             case 1:
                 move('.page1 .page-left').set('left','0').end();
                 move('.page1 .page-right').set('right','0').end();
+                if (flag) {
+                    addPhotos(); 
+                    flag = false; 
+                }
                 break;
             case 2: 
                 move('.page2 .content').set('opacity', 1).duration('1s').end();
