@@ -149,10 +149,6 @@ $('#fullpage').fullpage({
                 break;
             case 2: 
                 move('.page2 .content').set('opacity', 1).duration('1s').end();
-                if (flag) {
-                    addPhotos(); 
-                    flag = false; 
-                }
                 break;
             case 3:
                 resort(random([0,data.length - 1]));
