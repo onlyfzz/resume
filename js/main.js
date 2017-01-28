@@ -146,13 +146,13 @@ $('#fullpage').fullpage({
             case 1:
                 move('.page1 .page-left').set('left','0').end();
                 move('.page1 .page-right').set('right','0').end();
+                break;
+            case 2: 
+                move('.page2 .content').set('opacity', 1).duration('1s').end();
                 if (flag) {
                     addPhotos(); 
                     flag = false; 
                 }
-                break;
-            case 2: 
-                move('.page2 .content').set('opacity', 1).duration('1s').end();
                 break;
             case 3:
                 resort(random([0,data.length - 1]));
