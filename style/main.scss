@@ -17,10 +17,16 @@ body {
         font-size: 40px;
     }
     .content-wrap{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
         display: flex; 
         width: 80%;
         margin: 0 auto;
         .page-left {
+            -webkit-flex: 0 0 200px;
+            -ms-flex: 0 0 200px;
+            -moz-flex: 0 0 200px;
             flex: 0 0 200px;
             position: relative;
             left: -100%;
@@ -68,6 +74,9 @@ body {
             }
         }
         .page-right {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            -moz-flex: 1;
             flex: 1;
             position: relative;
             right: -100%;
