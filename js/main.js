@@ -21,7 +21,7 @@ var data = [
     }
 ];
 var flag = true;
-//翻面控制,点击的海报居中控制
+//点击的海报居中控制
 function turn(ele) {
     var n = ele.attr('id').split("-")[1];
     var cls = ele.className;
