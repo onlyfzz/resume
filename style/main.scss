@@ -9,12 +9,71 @@ body {
 .fp-slidesNav ul li a span {
     background: #f5f5f5;/*这里设置的是非活动导航的颜色*/
 }
-.page1 {
-    color: #f5f5f5;
+.section .head {
+    opacity: 0;
+}
+.head-wrap {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
     .head {
-        padding-bottom: 30px;
+        display: inline-block;
+        border: 1px solid #f5f5f5;
+        padding: 5px 40px;
+        font-size: 30px;
+        letter-spacing: 3px;
+        transition: all 1s;
+        &:hover {
+            background: #0b907e;
+        }
+    }
+}
+.page1 {
+    position: relative;
+    color: #f5f5f5;
+    .head-wrap {
+        position: relative;
         text-align: center;
-        font-size: 40px;
+        margin-bottom: 20px;
+        .head {
+            display: inline-block;
+            border: 1px solid #f5f5f5;
+            padding: 5px 40px;
+            font-size: 30px;
+            letter-spacing: 3px;
+            transition: all 1s;
+            &:hover {
+                background: #0b907e;
+            }
+        }
+        .tooltips {
+            position: absolute;
+            right: 60px;
+            top: -80px;
+            padding: 10px;
+            font-size: 20px;
+            background: #0b907e;
+            color: #f5f5f5;
+            box-shadow: 0 0 8px #aee2d9;
+            transition: all 1s;
+            &:after {
+                content: '';
+                position: absolute;
+                left: -25px;
+                top: 13px;
+                height: 0;
+                border: 10px solid transparent;
+                border-right: 15px solid #0b907e;
+                transition: all 1s;
+            }
+            &:hover {
+                color: #aaa;
+                background: #abd0ca;
+                &:after {
+                    border-right: 15px solid #abd0ca;
+                }
+            }
+        }
     }
     .content-wrap{
         display: -webkit-flex;
@@ -118,9 +177,10 @@ body {
     text-align: center;
     color: #f5f5f5;
     .head {
-        padding: 30px;
-        font-size: 40px;
-    }
+            &:hover {
+                background: rgb(142, 142, 202);
+            }
+        }
     .content {
         opacity: 0;
         line-height: 1.8;
@@ -147,9 +207,11 @@ body {
             position: absolute;
             z-index: 2;
             top: 20px;
-            width: 100%;
+            left: 50%;
+            border-bottom: 1px solid #f5f5f5;
+            padding: 5px 20px;
+            transform: translate(-50%);
             font-size: 30px;      
-            text-align: center;
             color: #fff;
         }
     }
@@ -247,8 +309,9 @@ body {
     text-align: center;
     color: #fff;
     .head {
-        padding: 30px;
-        font-size: 30px;       
+        &:hover {
+            background: rgb(142, 142, 202);
+        }
     }
     .content {
         opacity: 0;

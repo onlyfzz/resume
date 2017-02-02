@@ -145,17 +145,22 @@ $('#fullpage').fullpage({
     afterLoad: function(anchorLink, index) {
         switch (index){
             case 1:
+                move('.page1 .head').set('opacity', '1').end();
+                move('.page1 .tooltips').set('top', '3px').end();
                 move('.page1 .page-left').set('left','0').end();
                 move('.page1 .page-right').set('right','0').end();
                 break;
             case 2: 
                 $('.page3').css('opacity', 1);
+                move('.page2 .head').set('opacity', '1').end();
                 move('.page2 .content').set('opacity', 1).duration('1s').end();
                 break;
             case 3:
+                move('.page3 .head').set('opacity', '1').end();
                 resort(random([0,data.length - 1]));
                 break;
             case 4: 
+                move('.page4 .head').set('opacity', '1').end();
                 move('.page4 .content').set('opacity', 1).duration('1s').end();
                 break;
             default :
@@ -166,16 +171,21 @@ $('#fullpage').fullpage({
     onLeave: function(index, nextIndex, direction) {
         switch (index){
             case 1:
+                move('.page1 .head').set('opacity', '0').end();
+                move('.page1 .tooltips').set('top', '-80px').end();
                 move('.page1 .page-left').set('left','-100%').end();
                 move('.page1 .page-right').set('right','-100%').end();
                 break;
             case 2: 
+                move('.page2 .head').set('opacity', '0').end();
                 move('.page2 .content').set('opacity', 0).end();
                 break;
             case 3:
+                move('.page3 .head').set('opacity', '0').end();
                 resort(random([0,data.length - 1]));
                 break;
             case 4: 
+                move('.page4 .head').set('opacity', '0').end();
                 move('.page4 .content').set('opacity', 0).end();
                 break;
             default :
