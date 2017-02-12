@@ -10,9 +10,9 @@ var data = [
         site: 'https://github.com/onlyfzz/music-player-PC'
     },
     {
-        img: 'pic3.png',
-        caption: 'Vue2.0创建外卖app(扫描二维码)',
-        site: 'https://github.com/onlyfzz/sell-app'
+        img: 'douyu.png',
+        caption: 'Vue2.0创建斗鱼TV-App(扫描二维码)',
+        site: 'https://github.com/onlyfzz/Douyu-Tv'
     },
     {
         img: 'pic4.jpg',
